@@ -1,0 +1,54 @@
+version: '3'
+services:
+    apache:
+        build: .docker/apache
+        container_name: project_apache
+        ports:
+          - 80:80
+        volumes:
+          - .docker/config/vhosts:/etc/apache2/sites-enabled
+          - .:/home/wwwroot/project
+        depends_on:
+          - php
+
+    mysql:
+        image: mysql:5.7
+        container_name: project_mysql
+        volumes:
+            - .docker/data/db:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: project
+            MYSQL_USER: tomaz
+            MYSQL_PASSWORD: root
+        ports:
+            - 3306:3306
+
+    php:
+        build: .docker/php
+        container_name: project_php
+        volumes:
+          - .:/home/wwwroot/project
+        environment:
+          - maildev_host=project_maildev
+        depends_on:
+          - maildev
+          - mysql
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: project_phpmyadmin
+        ports:
+            - 8080:80
+        links:
+            - mysql
+        environment:
+            MYSQL_USERNAME: tomaz
+            MYSQL_ROOT_PASSWORD: root
+            PMA_HOST: mysql
+
+    maildev:
+        image: djfarrelly/maildev
+        container_name: project_maildev
+        ports:
+          - 8001:80

@@ -1,0 +1,21 @@
+{
+    "name": "tomazahlin/ketogenic",
+    "type": "pagekit-theme",
+    "version": "1.0.0",
+    "title": "Ketogenic theme",
+    "description": "Theme for ketogenic websites (light green, dark green, orange).",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pagekit",
+            "email": "info@pagekit.com",
+            "homepage": "http://pagekit.com"
+        }
+    ],
+    "extra": {
+        "image": "image.png"
+    },
+    "archive": {
+        "exclude": ["node_modules", "!/app", "!/css", "/app/assets", "gulpfile.js", "bower.js", "package.js"]
+    }
+}
