@@ -217,7 +217,8 @@ iframe{
     flex-wrap:wrap;
     margin:0;
     padding:0;
-    list-style:none
+    list-style:none;
+    text-align: justify;
 }
 .uk-grid:before,.uk-grid:after{
     content:"";
