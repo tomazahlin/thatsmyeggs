@@ -7143,3 +7143,22 @@ html{
 .uk-navbar-nav>*{
     color: #adadad !important;
 }
+
+/* IMG */
+img.img-small {
+    max-width:200px;
+}
+img.img-medium {
+    max-width:400px;
+}
+img.img-large {
+    max-width:100%;
+}
+img.left {
+    float: left;
+    margin:0 20px 0 0;
+}
+img.right {
+    float: right;
+    margin:0 0 0 20px;
+}
