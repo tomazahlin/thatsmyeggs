@@ -7153,6 +7153,7 @@ article p {
 article p.hint {
     background-color: #cfe6b6;
     color: black;
+    padding: 20px;
 }
 
 /* IMG */
