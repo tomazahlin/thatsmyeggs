@@ -7145,6 +7145,16 @@ html{
     color: #adadad !important;
 }
 
+/* Paragraph */
+article p {
+    clear: both;
+    overflow: hidden;
+}
+article p.hint {
+    background-color: #cfe6b6;
+    color: black;
+}
+
 /* IMG */
 img.img-small {
     max-width:200px;
