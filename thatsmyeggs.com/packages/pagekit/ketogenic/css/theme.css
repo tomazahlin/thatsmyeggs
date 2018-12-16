@@ -7230,7 +7230,7 @@ article p {
 article p.hint {
     background-color: #cfe6b6;
     color: black;
-    padding: 20px;
+    padding: 50px;
 }
 
 /* IMG */
@@ -7245,9 +7245,9 @@ img.img-large {
 }
 img.left {
     float: left;
-    margin:10px 20px 0 0;
+    margin:5px 50px 50px 0;
 }
 img.right {
     float: right;
-    margin:10px 0 0 20px;
+    margin:5px 0 50px 50px;
 }
